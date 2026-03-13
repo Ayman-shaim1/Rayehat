@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import { colors } from './colors';
-import { fonts } from './fonts';
+import { StyleSheet } from "react-native";
+import { colors } from "./colors";
+import { fonts } from "./fonts";
 
 export const radius = {
   xs: 4,
@@ -17,15 +17,45 @@ export const spacing = {
   md: 12,
   lg: 16,
   xl: 24,
-  '2xl': 32,
+  "2xl": 32,
 };
 
 export const ui = StyleSheet.create({
+  // ── Typography ─────────────────────────
+  textTitle: {
+    fontFamily: fonts.bold,
+    fontSize: 18,
+    color: colors.foreground,
+    letterSpacing: 1.8,
+    textTransform: "uppercase",
+  },
+
+  textSection: {
+    textTransform: "uppercase",
+    letterSpacing: 1.8,
+    fontFamily: fonts.semiBold,
+    fontSize: 14,
+    color: colors.foreground,
+  },
+  textBody: {
+    letterSpacing: 1.8,
+
+    fontFamily: fonts.regular,
+    fontSize: 13,
+    color: colors.foreground,
+    lineHeight: 20,
+  },
+  textCaption: {
+    fontFamily: fonts.medium,
+    fontSize: 10,
+    color: colors.foreground,
+  },
+
   // ── Button ──────────────────────────────
   button: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     borderRadius: radius.md,
     paddingVertical: 10,
     paddingHorizontal: 16,
@@ -41,12 +71,12 @@ export const ui = StyleSheet.create({
     backgroundColor: colors.destructive,
   },
   buttonOutline: {
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
     borderWidth: 1,
     borderColor: colors.input,
   },
   buttonGhost: {
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
   },
   buttonSm: {
     paddingVertical: 6,
@@ -107,7 +137,7 @@ export const ui = StyleSheet.create({
     paddingHorizontal: 12,
     minHeight: 40,
     // Flat shadcn look - no shadows or emboss
-    shadowColor: 'transparent',
+    shadowColor: "transparent",
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0,
     shadowRadius: 0,
@@ -146,7 +176,7 @@ export const ui = StyleSheet.create({
     borderRadius: radius.lg,
     borderWidth: 1,
     borderColor: colors.border,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   cardHeader: {
     padding: spacing.lg,
@@ -167,8 +197,8 @@ export const ui = StyleSheet.create({
     paddingBottom: spacing.lg,
   },
   cardFooter: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     paddingHorizontal: spacing.lg,
     paddingBottom: spacing.lg,
     gap: spacing.sm,
@@ -180,9 +210,9 @@ export const ui = StyleSheet.create({
     height: 40,
     borderRadius: radius.full,
     backgroundColor: colors.muted,
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'hidden',
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
   },
   avatarSm: {
     width: 32,
@@ -193,8 +223,8 @@ export const ui = StyleSheet.create({
     height: 56,
   },
   avatarImage: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   avatarFallback: {
     fontFamily: fonts.medium,
@@ -210,14 +240,14 @@ export const ui = StyleSheet.create({
 
   // ── Badge ───────────────────────────────
   badge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'flex-start',
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "flex-start",
     borderRadius: radius.sm,
     paddingVertical: 2,
     paddingHorizontal: 10,
     borderWidth: 1,
-    borderColor: 'transparent',
+    borderColor: "transparent",
   },
   badgeDefault: {
     backgroundColor: colors.primary,
@@ -229,7 +259,7 @@ export const ui = StyleSheet.create({
     backgroundColor: colors.destructive,
   },
   badgeOutline: {
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
     borderColor: colors.border,
   },
   badgeText: {
@@ -254,14 +284,14 @@ export const ui = StyleSheet.create({
   },
   dividerVertical: {
     width: 1,
-    height: '100%',
+    height: "100%",
     backgroundColor: colors.border,
   },
 
   // ── ListItem ────────────────────────────
   listItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     paddingVertical: 12,
     paddingHorizontal: spacing.lg,
     gap: 12,
@@ -285,8 +315,8 @@ export const ui = StyleSheet.create({
     color: colors.mutedForeground,
   },
   listItemRight: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   listItemChevron: {
     fontSize: 18,
@@ -295,22 +325,22 @@ export const ui = StyleSheet.create({
 
   // ── Tabs ────────────────────────────────
   tabsList: {
-    flexDirection: 'row',
+    flexDirection: "row",
     backgroundColor: colors.muted,
     borderRadius: radius.md,
     padding: 4,
   },
   tabsTrigger: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: radius.sm,
   },
   tabsTriggerActive: {
     backgroundColor: colors.background,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.05,
     shadowRadius: 2,
@@ -332,8 +362,8 @@ export const ui = StyleSheet.create({
   modalOverlay: {
     flex: 1,
     ...StyleSheet.absoluteFillObject,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: colors.overlay,
     paddingHorizontal: spacing.xl,
   },
@@ -341,19 +371,19 @@ export const ui = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
   },
   modalContentWrapper: {
-    width: '100%',
+    width: "100%",
     maxWidth: 400,
-    alignSelf: 'center',
+    alignSelf: "center",
     paddingHorizontal: spacing.lg,
   },
   modalContent: {
-    width: '100%',
+    width: "100%",
     maxWidth: 400,
-    alignSelf: 'center',
+    alignSelf: "center",
     backgroundColor: colors.background,
     borderRadius: radius.lg,
-    overflow: 'hidden',
-    shadowColor: '#000',
+    overflow: "hidden",
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 16,
@@ -379,13 +409,13 @@ export const ui = StyleSheet.create({
     paddingBottom: spacing.lg,
   },
   modalFooter: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
+    flexDirection: "row",
+    justifyContent: "flex-end",
     padding: spacing.lg,
     gap: spacing.sm,
   },
   modalClose: {
-    position: 'absolute',
+    position: "absolute",
     top: 12,
     right: 12,
     padding: 12,
@@ -399,21 +429,21 @@ export const ui = StyleSheet.create({
 
   // ── Toast ───────────────────────────────
   toastContainer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 40,
     left: spacing.lg,
     right: spacing.lg,
     zIndex: 9999,
   },
   toast: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     backgroundColor: colors.foreground,
     borderRadius: radius.lg,
     paddingVertical: 12,
     paddingHorizontal: spacing.lg,
     gap: 12,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.15,
     shadowRadius: 12,
@@ -451,7 +481,7 @@ export const ui = StyleSheet.create({
   skeleton: {
     backgroundColor: colors.muted,
     borderRadius: radius.md,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   skeletonCircle: {
     borderRadius: radius.full,
@@ -464,7 +494,7 @@ export const ui = StyleSheet.create({
     borderRadius: radius.full,
     backgroundColor: colors.input,
     padding: 2,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   switchTrackActive: {
     backgroundColor: colors.primary,
@@ -474,7 +504,7 @@ export const ui = StyleSheet.create({
     height: 20,
     borderRadius: radius.full,
     backgroundColor: colors.background,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
@@ -486,8 +516,8 @@ export const ui = StyleSheet.create({
 
   // ── Checkbox ────────────────────────────
   checkboxRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 8,
   },
   checkbox: {
@@ -496,8 +526,8 @@ export const ui = StyleSheet.create({
     borderRadius: radius.xs,
     borderWidth: 1.5,
     borderColor: colors.primary,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   checkboxChecked: {
     backgroundColor: colors.primary,
@@ -520,16 +550,16 @@ export const ui = StyleSheet.create({
   bottomSheetOverlay: {
     flex: 1,
     backgroundColor: colors.overlay,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   bottomSheetContent: {
     backgroundColor: colors.background,
     borderTopLeftRadius: radius.xl,
     borderTopRightRadius: radius.xl,
-    maxHeight: '80%',
+    maxHeight: "80%",
   },
   bottomSheetHandle: {
-    alignItems: 'center',
+    alignItems: "center",
     paddingVertical: 12,
   },
   bottomSheetHandleBar: {
@@ -544,7 +574,7 @@ export const ui = StyleSheet.create({
 
   // ── Spinner ─────────────────────────────
   spinner: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

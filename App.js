@@ -1,21 +1,15 @@
-import { useState } from "react";
-
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import HomeScreen from "./screens/HomeScreen";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaProvider>
       <StatusBar style="auto" />
-    </View>
+      <HomeScreen />
+    </SafeAreaProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    paddingHorizontal: 40,
-  },
-});
+const styles = StyleSheet.create({});

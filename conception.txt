@@ -1,0 +1,12 @@
+
+fragrances : {
+    id,title,price,description,image,isNiche,isForWomen,
+}
+
+brand : {
+    id,title,image
+}
+
+note : {
+    id, title, image
+}
